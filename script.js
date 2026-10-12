@@ -57,12 +57,14 @@
       const { w, h, dpr } = fit(c);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
       const cx = w * .58, cy = h * .5, R = Math.min(w, h) * .36, g = 9;
+      // light source orbits the sphere so the lit face sweeps around
+      const lx = Math.cos(t) * .7, ly = Math.sin(t * .7) * .5, lz = .6;
       for (let y = g; y < h; y += g) for (let x = g; x < w; x += g) {
         const dx = (x - cx) / R, dy = (y - cy) / R, d = Math.hypot(dx, dy);
         let a, col = CEMENT, s = 1.2;
         if (d < 1) {
           const z = Math.sqrt(1 - d * d);
-          const lit = (dx * -.5 + dy * -.4 + z * .75);
+          const lit = (dx * lx + dy * ly + z * lz) + Math.sin(dx * 6 + t * 3) * .04;
           a = .18 + Math.max(0, lit) * .8;
           s = 1 + Math.max(0, lit) * 2.2;
           if (lit > .78) col = SAND;
@@ -72,7 +74,7 @@
         ctx.fillStyle = col; ctx.globalAlpha = a;
         ctx.fillRect(x - s / 2, y - s / 2, s, s);
       }
-      ctx.globalAlpha = 1; t += reduce ? 0 : .01;
+      ctx.globalAlpha = 1; t += reduce ? 0 : .012;
       if (!reduce) requestAnimationFrame(draw);
     }
     draw();
