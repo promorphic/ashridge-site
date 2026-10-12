@@ -37,7 +37,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
-  margin: 0;
+  margin: 0; overflow-x: hidden;
   background: var(--black);
   color: var(--white);
   font-family: var(--sans);
@@ -47,7 +47,7 @@ body {
 }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3, h4, p { margin: 0; font-weight: 400; }
-h1 { font-size: clamp(40px, 7vw, 92px); line-height: 1.1; letter-spacing: -0.025em; }
+h1 { font-size: clamp(34px, 7vw, 92px); overflow-wrap: anywhere; line-height: 1.1; letter-spacing: -0.025em; }
 h2 { font-size: clamp(28px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.02em; }
 h3 { font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.02em; }
 h4 { font-size: 22px; line-height: 1.2; letter-spacing: -0.01em; }
@@ -132,7 +132,7 @@ canvas { display: block; }
   background: rgba(0,0,0,.45);
 }
 .stat strong { font-weight: 700; margin-left: 8px; }
-.hero-note { position: relative; align-self: flex-end; font-size: 13px; color: var(--cement); }
+.hero-note { position: relative; align-self: flex-end; font-size: 13px; color: var(--cement); text-align: right; max-width: 100%; }
 .hero-note a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
 
 /* --- intro ----------------------------------------------------------------- */
@@ -141,6 +141,7 @@ canvas { display: block; }
 
 /* --- flow strip ------------------------------------------------------------ */
 .flow {
+  min-width: 0;
   position: relative; display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch;
   background: var(--ink); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
   overflow: hidden;
@@ -151,6 +152,7 @@ canvas { display: block; }
 .flow-bars-left { mask-image: linear-gradient(90deg, #000 60%, transparent); -webkit-mask-image: linear-gradient(90deg, #000 60%, transparent); }
 .flow-bars-right { mask-image: linear-gradient(270deg, #000 60%, transparent); -webkit-mask-image: linear-gradient(270deg, #000 60%, transparent); }
 .flow-track {
+  min-width: 0; max-width: 100%;
   list-style: none; margin: 0; padding: 28px 24px;
   display: flex; align-items: center; gap: 0;
 }
@@ -238,16 +240,18 @@ canvas { display: block; }
 
 /* --- responsive ------------------------------------------------------------ */
 @media (max-width: 900px) {
+  h1 br, .intro h2 br, .contact h2 br { display: none; }
+  .hero-note { align-self: flex-start; text-align: left; }
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
   .nav .btn { display: none; }
   .nav.open .nav-links { display: flex; position: fixed; inset: 0; background: var(--black); flex-direction: column; justify-content: center; align-items: center; gap: 28px; font-size: 24px; z-index: -1; }
   .nav.open { mix-blend-mode: normal; }
   .side-index { display: none; }
-  .product { grid-template-columns: 1fr; margin-left: 0; min-height: 0; }
+  .product { grid-template-columns: minmax(0, 1fr); margin-left: 0; min-height: 0; }
   .product-copy { order: 2; padding: 40px var(--gutter) 56px; }
   .product-art { order: 1; min-height: 56vw; border-left: 0; border-bottom: 1px solid var(--line); }
-  .flow { grid-template-columns: 1fr; }
+  .flow { grid-template-columns: minmax(0, 1fr); }
   .flow-bars { display: none; }
   .flow-track { overflow-x: auto; padding: 24px 16px; }
   .banner { grid-template-columns: 1fr; }
