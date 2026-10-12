@@ -85,11 +85,11 @@ canvas { display: block; }
 .link { font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
 .link:hover { color: var(--blue-light); }
 
-/* --- logo: ridge monogram + mono wordmark ---------------------------------- */
+/* --- logo: ridge mark + mono wordmark ---------------------------------- */
 .wordmark, .footer-mark { display: inline-flex; align-items: center; gap: 10px; color: inherit; }
-.mark { width: 26px; height: 26px; flex: none; }
+.mark { width: 22px; height: 22px; flex: none; }
 .wordmark-text { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .22em; line-height: 1; }
-.footer-mark .mark { width: 48px; height: 48px; }
+.footer-mark .mark { width: 40px; height: 40px; }
 .footer-mark .wordmark-text { font-size: 16px; }
 
 /* --- nav ------------------------------------------------------------------- */
