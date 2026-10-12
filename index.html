@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ashridge — Institutional Vault Infrastructure on Canton</title>
+  <meta name="description" content="Ashridge is institutional-grade vault infrastructure on the Canton Network. Curated, privacy-preserving yield for any asset.">
+  <meta property="og:title" content="Ashridge — Institutional Vault Infrastructure on Canton">
+  <meta property="og:description" content="Curated, privacy-preserving yield for any asset. Built on Canton.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ashridge.xyz/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav" id="top">
+    <a class="wordmark" href="#top" aria-label="Ashridge home">
+      <span>A</span><span>S</span><span>H</span><span>R</span><span>I</span><span>D</span><span>G</span><span>E</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#vaults">Vaults</a>
+      <a href="#curators">Curators</a>
+      <a href="#institutions">Institutions</a>
+      <a href="#canton">Canton</a>
+      <a href="#docs">Documentation</a>
+    </nav>
+    <a class="btn btn-light" href="#contact">Request Access</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1>Institutional Vault<br>Infrastructure on Canton</h1>
+      <div class="stat-row">
+        <span class="stat">NETWORK <strong>CANTON</strong></span>
+        <span class="stat">SETTLEMENT <strong>ATOMIC</strong></span>
+        <span class="stat">PRIVACY <strong>BY DEFAULT</strong></span>
+      </div>
+    </div>
+    <p class="hero-note">Ashridge is opening to curators and institutions. <a href="#contact">Request access.</a></p>
+  </section>
+
+  <!-- WHAT IS ASHRIDGE -->
+  <section class="intro">
+    <span class="eyebrow">WHAT IS ASHRIDGE</span>
+    <h2>Institutional grade vault infrastructure.<br>Curated yield for any asset. On Canton.</h2>
+  </section>
+
+  <!-- FLOW STRIP -->
+  <section class="flow" aria-label="How it works">
+    <div class="flow-bars flow-bars-left" aria-hidden="true"></div>
+    <ol class="flow-track">
+      <li>
+        <span class="flow-label">Deposit</span>
+        <span class="flow-chip"><i class="dot d1"></i><i class="dot d2"></i><i class="dot d3"></i><i class="dot d4"></i></span>
+      </li>
+      <li>
+        <span class="flow-label">Get</span>
+        <span class="flow-chip"><i class="dot gold"></i>VAULT SHARE</span>
+      </li>
+      <li>
+        <span class="flow-label">Earn</span>
+        <span class="flow-chip"><i class="dot gold"></i>CURATED YIELD</span>
+      </li>
+      <li>
+        <span class="flow-label">Use</span>
+        <span class="flow-chip"><i class="dot d1"></i><i class="dot d2"></i>ACROSS CANTON</span>
+      </li>
+    </ol>
+    <div class="flow-bars flow-bars-right" aria-hidden="true"></div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products">
+    <aside class="side-index" aria-hidden="true">
+      <span data-target="vaults">VAULTS —</span>
+      <span data-target="curators">CURATORS —</span>
+      <span data-target="institutions">INSTITUTIONS —</span>
+    </aside>
+
+    <article class="product" id="vaults">
+      <div class="product-copy">
+        <div class="product-head">
+          <h3>Vaults</h3>
+          <a class="btn btn-sand" href="#contact">Explore</a>
+        </div>
+        <p>Non-custodial, policy-bound vaults for tokenized assets on Canton. Deposit once; a curator allocates across whitelisted strategies while your position stays private to you and your counterparties.</p>
+      </div>
+      <figure class="product-art">
+        <canvas data-art="field" aria-hidden="true"></canvas>
+      </figure>
+    </article>
+
+    <article class="product" id="curators">
+      <div class="product-copy">
+        <div class="product-head">
+          <h3>Curators</h3>
+          <a class="btn btn-sand" href="#contact">Apply</a>
+        </div>
+        <p>Launch and manage vaults with your own mandate, risk limits and fee structure. Ashridge handles accounting, share issuance and settlement so you can focus on allocation.</p>
+      </div>
+      <figure class="product-art">
+        <canvas data-art="lattice" aria-hidden="true"></canvas>
+      </figure>
+    </article>
+
+    <article class="product" id="institutions">
+      <div class="product-copy">
+        <div class="product-head">
+          <h3>Institutions</h3>
+          <a class="link" href="#contact">Talk to us</a>
+        </div>
+        <p>Keep assets with your existing custodian and still earn on Ashridge infrastructure. Sub-transaction privacy, selective disclosure and atomic settlement built for regulated balance sheets.</p>
+      </div>
+      <figure class="product-art">
+        <canvas data-art="wave" aria-hidden="true"></canvas>
+      </figure>
+    </article>
+  </section>
+
+  <!-- COMING SOON -->
+  <section class="banner">
+    <div class="banner-copy">
+      <h2>New Vaults<br>Coming Soon</h2>
+    </div>
+    <div class="banner-grid" aria-hidden="true"></div>
+  </section>
+
+  <!-- WHY CANTON -->
+  <section class="canton" id="canton">
+    <div class="canton-head">
+      <h2>Built On Canton</h2>
+      <p>Privacy in our foundation.</p>
+    </div>
+    <ul class="canton-grid">
+      <li>
+        <span class="eyebrow">01</span>
+        <h4>Sub-transaction privacy</h4>
+        <p>Only the parties to a position see it. No public mempool, no leaked order flow.</p>
+      </li>
+      <li>
+        <span class="eyebrow">02</span>
+        <h4>Atomic settlement</h4>
+        <p>Deposits, share issuance and strategy execution settle in a single synchronized transaction.</p>
+      </li>
+      <li>
+        <span class="eyebrow">03</span>
+        <h4>Institutional rails</h4>
+        <p>Compose with tokenized cash, treasuries and collateral already live on Canton.</p>
+      </li>
+      <li>
+        <span class="eyebrow">04</span>
+        <h4>Daml-native controls</h4>
+        <p>Mandates, limits and disclosure rules are enforced in smart contract code, not off-chain policy.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <span class="eyebrow">GET IN TOUCH</span>
+    <h2>Curating or allocating?<br>We’d like to hear from you.</h2>
+    <a class="btn btn-light" href="mailto:hello@ashridge.xyz">hello@ashridge.xyz</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-mark" aria-hidden="true">
+      <span>A</span><span>S</span><span>H</span><span>R</span><span>I</span><span>D</span><span>G</span><span>E</span>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <span class="eyebrow">ASHRIDGE</span>
+        <a href="#vaults">VAULTS</a>
+        <a href="#curators">CURATORS</a>
+        <a href="#institutions">INSTITUTIONS</a>
+      </div>
+      <div>
+        <span class="eyebrow">COMMUNITY</span>
+        <a href="#" id="docs">DOCUMENTATION</a>
+        <a href="https://x.com/" rel="noopener">X (TWITTER)</a>
+        <a href="https://github.com/promorphic" rel="noopener">GITHUB</a>
+      </div>
+      <div>
+        <span class="eyebrow">TERMS</span>
+        <a href="#">TERMS OF USE</a>
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">DISCLAIMERS</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>ALL RIGHTS RESERVED</span>
+      <span>© 2026 ASHRIDGE</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
