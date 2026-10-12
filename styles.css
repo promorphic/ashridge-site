@@ -97,12 +97,11 @@ canvas { display: block; }
   position: fixed; inset: 0 0 auto 0; z-index: 50;
   display: flex; align-items: center; justify-content: space-between;
   padding: 18px var(--gutter);
-  mix-blend-mode: difference; color: var(--white);
+  color: var(--white);
 }
 .nav-links { display: flex; gap: clamp(20px, 3.5vw, 48px); font-size: 14px; }
 .nav-links a { opacity: .9; }
 .nav-links a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
-.nav .btn { mix-blend-mode: normal; }
 .nav-toggle { display: none; background: none; border: 0; width: 36px; height: 36px; cursor: pointer; flex-direction: column; gap: 6px; align-items: center; justify-content: center; }
 .nav-toggle span { display: block; width: 20px; height: 1.5px; background: var(--white); transition: transform .25s; }
 .nav.open .nav-toggle span:first-child { transform: translateY(3.75px) rotate(45deg); }
@@ -234,7 +233,6 @@ canvas { display: block; }
   .nav-toggle { display: flex; }
   .nav .btn { display: none; }
   .nav.open .nav-links { display: flex; position: fixed; inset: 0; background: var(--black); flex-direction: column; justify-content: center; align-items: center; gap: 28px; font-size: 24px; z-index: -1; }
-  .nav.open { mix-blend-mode: normal; }
   .side-index { display: none; }
   .product { grid-template-columns: minmax(0, 1fr); margin-left: 0; min-height: 0; }
   .product-copy { order: 2; padding: 40px var(--gutter) 56px; }
