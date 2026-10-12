@@ -154,24 +154,29 @@ canvas { display: block; }
 .flow-track {
   min-width: 0; max-width: 100%;
   list-style: none; margin: 0; padding: 28px 24px;
-  display: flex; align-items: center; gap: 0;
+  display: flex; align-items: stretch; gap: 0;
 }
 .flow-track li {
-  display: flex; flex-direction: column; gap: 14px; padding: 0 28px;
+  display: flex; flex-direction: column; justify-content: flex-start; gap: 14px; padding: 0 28px;
   border-right: 1px solid var(--line);
 }
 .flow-track li:last-child { border-right: 0; }
 .flow-label { font-size: 15px; }
 .flow-chip {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-family: var(--mono); font-size: 10px; letter-spacing: .08em;
-  border: 1px solid var(--line); padding: 7px 10px 6px; line-height: 1; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 8px; height: 36px; align-self: flex-start;
+  font-family: var(--mono); font-size: 11px; letter-spacing: .08em;
+  border: 1px solid var(--line); border-radius: 999px; padding: 5px 14px 5px 5px; line-height: 1; white-space: nowrap;
+  background: rgba(255,255,255,.03);
 }
-.dot { width: 14px; height: 14px; border-radius: 50%; display: inline-block; margin-right: -6px; border: 1px solid var(--ink); }
-.dot:last-of-type { margin-right: 4px; }
-.dot.d1 { background: var(--cement); } .dot.d2 { background: var(--graphite); }
-.dot.d3 { background: var(--midnight); } .dot.d4 { background: var(--blue-light); }
-.dot.gold { background: var(--blue); }
+.flow-chip img, .coin { width: 26px; height: 26px; border-radius: 50%; display: block; flex: none; }
+.flow-chip-stack { padding-right: 5px; gap: 0; }
+.flow-chip-stack img { margin-left: -7px; box-shadow: 0 0 0 2px var(--ink); }
+.flow-chip-stack img:first-child { margin-left: 0; }
+.coin { display: grid; place-items: center; }
+.coin-ash { background: var(--white); color: var(--black); }
+.coin-ash svg { width: 20px; height: 20px; }
+.flow-chip-canton { padding-left: 12px; gap: 10px; }
+.flow-chip img.canton-mark { width: auto; height: 14px; border-radius: 0; }
 
 /* --- products -------------------------------------------------------------- */
 .products { position: relative; background: var(--ink); }
