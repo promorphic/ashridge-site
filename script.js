@@ -1,6 +1,6 @@
-/* Ashridge — generative illustrations (monochrome + gold accents) and nav. */
+/* Ashridge — generative illustrations (monochrome + blue accents) and nav. */
 (function () {
-  const SAND = '#f6e189', CEMENT = '#c6c7c5', GRAIN = '#a7a28d';
+  const SAND = '#86b1ff', CEMENT = '#c6c7c5', GRAIN = '#3c80ff';
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function fit(c) {
@@ -12,7 +12,7 @@
     return { w: r.width, h: r.height, dpr };
   }
 
-  /* Hero: flowing contour lines drifting over a dot grid, gold highlights. */
+  /* Hero: flowing contour lines drifting over a dot grid, blue highlights. */
   function hero(c) {
     const ctx = c.getContext('2d');
     let t = 0;
@@ -109,7 +109,7 @@
     draw();
   }
 
-  /* Wave: layered sine ribbons, strict monochrome with one gold line. */
+  /* Wave: layered sine ribbons, strict monochrome with one blue line. */
   function wave(c) {
     const ctx = c.getContext('2d'); let t = 0;
     function draw() {
