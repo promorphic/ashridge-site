@@ -121,14 +121,16 @@ canvas { display: block; }
   background: var(--blue); color: var(--white);
 }
 .coming-soon {
-  display: inline-flex; align-items: center; gap: 10px; margin-top: 18px;
-  font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--blue-light);
+  display: inline-flex; align-items: center; gap: 14px; margin-top: 28px;
+  font-family: var(--mono); font-weight: 500; font-size: clamp(16px, 1.6vw, 22px);
+  letter-spacing: .18em; text-transform: uppercase; color: var(--white);
+  border: 1px solid var(--blue-light); padding: 12px 20px 11px; line-height: 1;
 }
 .coming-soon::before {
-  content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--blue);
-  box-shadow: 0 0 0 0 rgba(60,128,255,.6); animation: pulse 2s infinite;
+  content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--blue-light);
+  box-shadow: 0 0 0 0 rgba(134,177,255,.7); animation: pulse 1.8s infinite;
 }
-@keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(60,128,255,0); } 100% { box-shadow: 0 0 0 0 rgba(60,128,255,0); } }
+@keyframes pulse { 70% { box-shadow: 0 0 0 12px rgba(134,177,255,0); } 100% { box-shadow: 0 0 0 0 rgba(134,177,255,0); } }
 .stat strong { font-weight: 700; margin-left: 8px; }
 .hero-note { position: relative; align-self: flex-end; font-size: 13px; color: var(--cement); text-align: right; max-width: 100%; }
 .hero-note a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
